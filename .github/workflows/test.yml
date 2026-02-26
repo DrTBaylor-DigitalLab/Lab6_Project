@@ -1,0 +1,53 @@
+name: Verilog Testbench
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-hex-to-7seg:
+    name: Test hex_to_7seg
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Icarus Verilog
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+
+      - name: Test Hex-to-7-Segment Decoder
+        run: |
+          iverilog -o sim.vvp rtl/hex_to_7seg.v tb/hex_to_7seg_tb.v
+          vvp sim.vvp | tee output.txt
+          grep -q "TEST PASSED" output.txt
+
+  test-disp-mux:
+    name: Test disp_mux
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Icarus Verilog
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+
+      - name: Test Display Multiplexer
+        run: |
+          iverilog -o sim.vvp rtl/disp_mux.v tb/disp_mux_tb.v
+          vvp sim.vvp | tee output.txt
+          grep -q "TEST PASSED" output.txt
+
+  test-hex-disp-top:
+    name: Test hex_disp_top
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Icarus Verilog
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+
+      - name: Test Hex Display System
+        run: |
+          iverilog -o sim.vvp rtl/hex_to_7seg.v rtl/disp_mux.v rtl/hex_disp_top.v tb/hex_disp_top_tb.v
+          vvp sim.vvp | tee output.txt
+          grep -q "TEST PASSED" output.txt
