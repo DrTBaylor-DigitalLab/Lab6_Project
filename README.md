@@ -19,7 +19,7 @@ hex_disp_top (top-level wrapper)
 └── hex_to_7seg - Hex-to-segment decoder (YOU COMPLETE)
 ```
 
-![RTL Diagram](../Assets/rtl_hex_disp_top.jpg)
+![RTL Diagram](Assets/rtl_hex_disp_top.jpg)
 
 Demo video: [Hexadecimal Display Demo](https://www.youtube.com/watch?v=sazMMbFvTlE)
 
@@ -63,7 +63,7 @@ Demo video: [Hexadecimal Display Demo](https://www.youtube.com/watch?v=sazMMbFvT
 
 **Reference waveform:**
 
-![Hex to 7-Segment Simulation Waveform](../Assets/hex_to_7_seg_simulation_waveform.jpg)
+![Hex to 7-Segment Simulation Waveform](Assets/hex_to_7_seg_simulation_waveform.jpg)
 
 ### Step 3: Display Multiplexer
 - [ ] Open `rtl/disp_mux.v` and review the provided cases for btnD and btnR
@@ -73,11 +73,11 @@ Demo video: [Hexadecimal Display Demo](https://www.youtube.com/watch?v=sazMMbFvT
 
 **Reference waveform:**
 
-![Display Mux Simulation Waveform](../Assets/Cursor_and_disp_mux_tb_vcd_—_Lab5_StudentTemplate.jpg)
+![Display Mux Simulation Waveform](Assets/Cursor_and_disp_mux_tb_vcd_—_Lab5_StudentTemplate.jpg)
 
 ### Step 4: Top-Level Integration
 - [ ] Open `rtl/hex_disp_top.v` and work through TODOs #1-#5
-- [ ] Use the RTL diagram (`../Assets/rtl_hex_disp_top.jpg`) as your guide
+- [ ] Use the RTL diagram (`Assets/rtl_hex_disp_top.jpg`) as your guide
 - [ ] TODOs #1-#3: Declare wires, extract digits from switches, create button vector
 - [ ] TODOs #4-#5: Instantiate disp_mux and hex_to_7seg with correct port connections
 
@@ -90,7 +90,7 @@ Demo video: [Hexadecimal Display Demo](https://www.youtube.com/watch?v=sazMMbFvT
 
 **Reference waveform:**
 
-![Hex Display Top Simulation Waveform](../Assets/hex_disp_top_simulation_waveform.jpg)
+![Hex Display Top Simulation Waveform](Assets/hex_disp_top_simulation_waveform.jpg)
 
 ### Step 6: Hardware Implementation
 - [ ] Set `hex_disp_top` as the top module for synthesis
