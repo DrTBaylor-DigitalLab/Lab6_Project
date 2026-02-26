@@ -73,7 +73,7 @@ Demo video: [Hexadecimal Display Demo](https://www.youtube.com/watch?v=sazMMbFvT
 
 **Reference waveform:**
 
-![Display Mux Simulation Waveform](Assets/Cursor_and_disp_mux_tb_vcd_—_Lab5_StudentTemplate.jpg)
+![Display Mux Simulation Waveform](Assets/disp_mux_simulation_waveform.jpg)
 
 ### Step 4: Top-Level Integration
 - [ ] Open `rtl/hex_disp_top.v` and work through TODOs #1-#5
